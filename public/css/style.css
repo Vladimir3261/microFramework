@@ -1,0 +1,202 @@
+.form-head{
+    width: 100%;
+    height: 50px;
+    background: -moz-linear-gradient(#FFF, #01B);
+    background: -ms-linear-gradient(#FFF, #01B);
+    background: -o-linear-gradient(#FFF, #01B);
+    background: -webkit-linear-gradient(#FFF, #01B);
+ }
+ 
+.reg{
+    width: 40%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: aqua;
+    margin-top: 50px;
+    border-radius: 10px; 
+}
+.log-input{
+    width: 80%;
+    height: 10%;
+    margin-left: 10%;
+    border: 1px solid black;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    background: -moz-linear-gradient(#FFF, #077);
+    background: -ms-linear-gradient(#FFF, #077);
+    background: -o-linear-gradient(#FFF, #077);
+    background: -webkit-linear-gradient(#FFF, #077);
+
+}
+.log-input:focus{
+    background: white;
+    box-shadow: #000 1px 1px 1px;
+    border: 0;
+}
+h1{
+    text-align: center;
+}
+.logg-info{
+    display: block;
+    color: grey;
+    font-family: inherit;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.log-submit{
+    width: 30%;
+    height: 50px;
+    margin: 0 auto;
+    background: white;
+    margin-top: 15px;
+    margin-left: 35%;
+    border: #000 1px solid;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 20px;
+}
+.log-submit:hover{
+    background: aqua;
+}
+.help-info{
+    float: right;
+    margin-right: 10px;
+}
+.help-info a{
+    text-decoration: none;
+}
+
+#email-ok{
+    display: none;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+}
+
+/*
+    REGISTER FORM
+*/
+
+    #register{
+        width: 40%;
+        margin: 0 auto;
+        padding: 30px 30px 30px 30px;
+        border: 1px #000 dotted;
+    }
+    
+    #register h2{
+        font-family: monospace;
+        text-align: center;
+    }
+    
+    #register .inputs{
+        float: right;
+        width: 300px;
+        height: 30px;
+        border: 1px solid bisque;
+        font-family: monospace;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    
+    #register p{
+        margin-top: 30px;
+    }
+    
+    #register label{
+        font-family: monospace;
+        font-size: 14px;
+    }
+    
+    #register .register-submit{
+        clear: both;
+        float: right;
+        margin-top: 10px;
+        height: 40px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        font-family: monospace;
+        font-size: 15px;
+    }
+    
+    #register .register-submit:hover{
+       background: grey; 
+    }
+    #register .info-p{
+        font-size: 15px;
+        float: right;
+        display: block;
+        margin-top: 5px;
+        color: red;
+    }    
+    
+    
+    .fileform { 
+    float: right;
+    background-color: #FFFFFF;
+    border: 1px solid bisque;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 26px;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    width: 59%;
+}
+ 
+.fileform .selectbutton { 
+    float: right;
+    background-color: #A2A3A3;
+    border: 1px solid #939494;
+    border-radius: 2px;
+    color: #FFFFFF;
+    float: right;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 2px 6px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+}
+ 
+.fileform #upload{
+    float: right;
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    -moz-opacity: 0; 
+    filter: alpha(opacity=0); 
+    opacity: 0; 
+    font-size: 150px; 
+    height: 30px; 
+    z-index:20;
+}
+.file{
+    margin-top: 30px;
+}
+.in{
+    margin-top: 20px;
+}
+.langs{
+    float: right;
+}
+.lang-change{
+    margin-left: 10px;
+    float: left;
+    cursor: pointer;
+}

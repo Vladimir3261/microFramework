@@ -1,0 +1,94 @@
+<?php
+if(isset($this->params['data'])){
+    $data = $this->params['data'];
+    $data['name'] ? $name = $data['name'] : $name = '';
+    $data['nick'] ? $nick = $data['nick'] : $nick = '';
+    $data['email'] ? $email = $data['email'] : $email = '';
+    $data['date'] ? $date = $data['date'] : $date = '';
+    $data['city'] ? $city = $data['city'] : $city = '';
+}
+
+if(isset($this->params['validate_error'])){
+    echo '--------------------validate error-------------------------<br/><pre>';
+    var_dump($this->params['validate_error']);
+   echo '</pre>---------------------------------------------<br/>';
+}
+if(isset($this->params['check_error'])){
+    echo '-----------------------check error----------------------<br/><pre>';
+    var_dump($this->params['check_error']);
+   echo '</pre>---------------------------------------------<br/>';
+}
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title><?=$this->t('Register')?></title>
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->sitePath.'css/style.css'?>">
+        <link rel="icon" href="<?=$this->sitePath.'images/favicon.ico'?>" type="image/x-icon" />
+        <script src="<?php echo $this->sitePath.'js/form.js'; ?>"></script>
+    </head>
+<body>
+    <form enctype="multipart/form-data" action="/registerprocess" method="post" onsubmit="//return registerVerify();"> 
+        <fieldset id="register">
+            <div class="langs">
+<div class="lang-change"><img src="<?=$this->sitePath.'images/us.png'?>" onclick="chLang('en');"></div>
+<div class="lang-change"><img src="<?=$this->sitePath.'images/ru.png'?>" onclick="chLang('ru');"></div>
+            </div>
+            <h2><?=$this->t('Register in the site')?></h2>
+    <p>
+        <label for="name"><?=$this->t('Put you name here')?></label>
+        <input type="text" name="name" class="inputs" placeholder="Vladimir" value="<?=@$name;?>">
+    </p> 
+    
+    <p>
+        <label for="nick"><?=$this->t('Put you nickname here')?></label>
+        <input type="text" name="nick" class="inputs" placeholder="nick007" value="<?=@$nick;?>">
+    </p>    
+    
+    <p>
+        <label for="email">email</label>
+        <input type="email" name="email" class="inputs" placeholder="name@gmail.com" value="<?=@$email;?>">
+    </p>
+    
+    <p>
+        <label for="date"><?=$this->t('date of birth')?></label>
+        <input type="date" name="date" class="inputs" placeholder="01.01.1990" value="<?=@$date;?>">
+    </p>
+    
+    <p>
+        <label for="city"><?=$this->t('You city')?></label>
+        <input type="text" name="city" class="inputs" placeholder="Kyiv" value="<?=@$city;?>">
+    </p>
+    
+    <p>
+        <label for="password"><?=$this->t('Password')?></label>
+        <input type="password" name="password" class="inputs">
+    </p>
+    
+    <p>
+        <label for="confirm"><?=$this->t('Confirm password')?></label>
+        <input type="password" name="confirm" class="inputs">
+    </p>
+    
+    <div class="file">
+        <label><?=$this->t('Download you photo')?></label>
+        <div class="fileform">
+            <div class="selectbutton"><?=$this->t('select')?></div>
+            <input id="upload" type="file" name="upload" accept="image/*" onchange="PreviewImage();" />
+        </div>
+    </div>
+    
+    <div class="in">
+        <span class="info-p"><?=$this->t('Fields with * is required')?></span> 
+        <img id="uploadPreview" style="width: 100px; height: 100px; display: none;" />  
+    </div>
+    
+    <p>
+        <input type="submit" value="<?=$this->t('Register now')?>" class="register-submit">
+    </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>

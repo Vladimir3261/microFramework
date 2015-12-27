@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><?=$this->t('Enter')?></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" href="<?=$this->sitePath.'images/favicon.ico'?>" type="image/x-icon" />
+        <script src="js/form.js"></script>
+    </head>
+    <body style="background: url('../images/bg.jpg') top no-repeat;">
+        <div class="overlay">
+            <img src="images/preloader.GIF" style="margin-top: 14%; margin-left: 48%;">
+        </div>
+        <div class="reg">
+<div class="langs" style="margin-right: 10px; margin-top: 10px;">
+    <div class="lang-change"><img src="<?=$this->sitePath.'images/us.png'?>" onclick="chLang('en');"></div>
+    <div class="lang-change"><img src="<?=$this->sitePath.'images/ru.png'?>" onclick="chLang('ru');"></div>
+</div>
+            <div class="form-head"><h1 style="margin-left: 60px;"><?=$this->t('Enter')?></h1></div>
+              <form name="regiseter-form" action="/auth" method="post" onsubmit="return validate();">
+
+                <span class="logg-info"><?=$this->t('Login')?></span>
+                <input type="email" name="email" onkeyup="emailValidate();" class="log-input">
+<img src="images/ok.png" id="email-ok">
+                <span class="logg-info"><?=$this->t('Password')?></span>
+                <input type="password" name="password" class="log-input">
+                <input type="submit" class="log-submit" value="<?=$this->t('Enter')?>">
+
+              </form>
+           <p class="help-info"> <a href="#"><?=$this->t('Remember password?')?></a> | <a href="/register"><?=$this->t('Register')?></a></p>
+        </div>
+    </body>
+</html>

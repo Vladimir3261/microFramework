@@ -1,0 +1,16 @@
+/* Uasge like this */
+// Allowed types jpg and png you can add new image type in this list in watermark.php
+<?php
+    require_once 'Watermark/watermark.php';
+     $mark = new watermark;
+     $mark->image = 'image.jpg'; // image to chage
+     $mark->stamp = 'stamp.png'; // watermark image
+     $mark->text = 'Test TExt'; // or don't fill this field if you not need text
+     $mark->right = 50; // right image margin
+     $mark->bottom = 50; // left image margin
+     $mark->text_top = 20; // top text margin
+     $mark->text_left = 10; // left text margin
+     $mark->color = "#B22222"; // text color
+     $mark->font_size = 50; // fiont size pt
+     $mark->opacity = 0; // text opacity
+     $mark->run(); // create new image

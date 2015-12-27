@@ -1,0 +1,27 @@
+    <head>
+        <title>Вход</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/form.js"></script>
+    </head>
+    
+        <body style="background: url('../images/bg.jpg') top no-repeat;">
+        <div class="overlay">
+            <img src="images/preloader.GIF" style="margin-top: 14%; margin-left: 48%;">
+        </div>
+        <div class="reg">
+            <div class="form-head"><h1>Вход</h1></div>
+              <form name="regiseter-form" action="/auth" method="post" onsubmit="return validate();">
+
+                <span class="logg-info">Логин</span>
+                <input type="email" name="email" onkeyup="emailValidate();" class="log-input">
+                <img src="images/ok.png" id="email-ok">
+                <span class="logg-info">Пароль</span>
+                <input type="password" name="password" class="log-input">
+                <input type="submit" class="log-submit" value="Войти">
+
+              </form>
+           <p class="help-info"> <a href="#">Забыли пароль?</a> | <a href="/register">Регистрация</a></p>
+        </div>
+    </body>
