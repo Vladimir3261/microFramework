@@ -42,9 +42,15 @@ function autoloadModel($class) {
         }
         include ($file);
 }
+function autoloadZend($class){
+    if(preg_match("/Zend/", $class)){
+        include ('../vendor/Zend/InputFilter/vendor/autoload.php');
+    }
+}
     /*
      * Запускаем автозагрузчики с использование стандартной библиотеки SPL
      */
+spl_autoload_register('autoloadZend');
 spl_autoload_register('autoloadVendor');
 spl_autoload_register('autoloadController');
 spl_autoload_register('autoloadModel');
